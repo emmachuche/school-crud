@@ -11,11 +11,13 @@
   </ion-item>
   <ion-item>
     <ion-label position="stacked">Edad del alumno</ion-label>
-    <ion-input [(ngModel)] = "studentsData.age" placeholder="nombre"></ion-input>
+    <ion-input [(ngModel)] = "studentsData.age" placeholder="Edad"></ion-input>
   </ion-item>
   <ion-item>
     <ion-label position="stacked">genero</ion-label>
-    <ion-checkbox color="primary" [(ngModel)] = "studentsData.genero">hombre</ion-checkbox>
+    <ion-label position="stacked">Hombre</ion-label>
+    <ion-checkbox color="primary" [(ngModel)] = "studentsData.genero"></ion-checkbox>
+    <ion-label position="stacked">Mujer</ion-label>
     <ion-checkbox color="primary" [(ngModel)] = "studentsData.genero">Mujer</ion-checkbox>
   </ion-item>
   <ion-item>

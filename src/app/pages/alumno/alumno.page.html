@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>alumno</ion-title>
+    <ion-button (click) ="delete()">
+      <ion-icon name="trash"></ion-icon>
+    </ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div *ngIf="student">
+    <ion-item>
+      <ion-label position="stacked">Nombre del alumno</ion-label>
+      <ion-input [(ngModel)]="student.name" placeholder="nombre del alumno"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">Edad</ion-label>
+      <ion-input [(ngModel)]="student.age" placeholder="edad"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">Nombre del alumno</ion-label>
+      <ion-input [(ngModel)]="student.genero" placeholder="genero"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">Nombre del alumno</ion-label>
+      <ion-input [(ngModel)]="student.birtday" placeholder="fecha de nacimiento"></ion-input>
+    </ion-item>
+    <ion-button expand="block" (click)="updateStudentData()">Actualizar estudiante</ion-button>
+  </div>
+</ion-content>

@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>alumnos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-item>
+    <ion-label position="stacked">Nombre de alumno</ion-label>
+    <ion-input [(ngModel)] = "studentsData.name" placeholder="nombre"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="stacked">Edad del alumno</ion-label>
+    <ion-input [(ngModel)] = "studentsData.age" placeholder="nombre"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="stacked">genero</ion-label>
+    <ion-checkbox color="primary" [(ngModel)] = "studentsData.genero">hombre</ion-checkbox>
+    <ion-checkbox color="primary" [(ngModel)] = "studentsData.genero">Mujer</ion-checkbox>
+  </ion-item>
+  <ion-item>
+    <ion-label position="stacked">cumpleaños</ion-label>
+    <ion-datetime [(ngModel)] = "studentsData.birtday" value="1995-04-15" min="1990-02" max="2000"
+    [dayShortNames]="customDayShortNames"
+    displayFormat="DDD. MMM DD, YY"
+    monthShortNames="jan, feb, mar, apr, mai, jun, jul, aug, sep, okt, nov, des"></ion-datetime>
+  </ion-item>
+    <ion-button expand="block" (click)="addStudentDetails()">Agregar estudiante</ion-button>
+
+  <ion-list>
+    <ion-item button *ngFor="let student of students" [routerLink]="['/','students',student.studID]"> 
+      <ion-label>
+        
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>

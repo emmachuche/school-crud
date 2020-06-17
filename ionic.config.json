@@ -1,5 +1,7 @@
 {
   "name": "escuela-crud",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }
